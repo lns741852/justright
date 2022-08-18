@@ -1,0 +1,321 @@
+/*#boxoutline {*/
+/*    background: #cff;*/
+/*    width: 95%;*/
+/*    max-width: 600px;*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    text-align: center;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*}*/
+
+/*.box {*/
+/*    padding: 6px 16px;*/
+/*    margin-top: 5px;*/
+/*    text-align: center;*/
+/*    background: #FFF;*/
+/*    width: 20%;*/
+/*    min-width: 88px;*/
+/*    position: relative;*/
+/*}*/
+/* */
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid rgb(158, 199, 138);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: rgb(158, 199, 138) transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#boxoutline {
+    background: #d0dddd;
+    width: 100%;
+    max-width: 600px;
+    display: none;
+    /*切換grid*/
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-auto-rows: 100px; */
+    /* 設定高度為100PX*/
+}
+
+.box {
+    padding: 8px 8px 6px 8px;
+    margin: 10px 8px;
+    text-align: center;
+    background: #FFF;
+    /* min-width: 88px; */
+    position: relative;
+}
+
+#boxnotice {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 400;
+    position: relative;
+    top: -2rem;
+    right: -7rem;
+}
+
+#boxnotice .noticealert {
+    background: rgb(172, 0, 0);
+    border: 1px rgb(172, 0, 0) solid;
+    color: #FFF;
+    border-radius: 50px;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+
+#boxnotice .noticesuccess {
+    background: rgb(0, 116, 0);
+    border: 1px rgb(0, 116, 0) solid;
+    color: #FFF;
+    border-radius: 50px;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+
+.boxalert {
+    background: rgb(172, 0, 0);
+    border: 1px rgb(172, 0, 0) solid;
+    color: #FFF;
+    border-radius: 50px;
+    font-size: 10px;
+    position: absolute;
+    right: -8px;
+    top: -10px
+}
+
+.boxsuccess {
+    background: rgb(0, 116, 0);
+    border: 1px rgb(0, 116, 0) solid;
+    color: #FFF;
+    border-radius: 50px;
+    font-size: 10px;
+    position: absolute;
+    right: -8px;
+    top: -10px
+}
+
+.block_input[type="checkbox"] {
+    -webkit-appearance: none;
+    vertical-align: middle;
+    margin-top: 0;
+    border: none;
+    /* height: 0.6rem;
+    width: 0.6rem; */
+    /* margin: 5px 3px 5px 3px; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* min-height: 12px;
+min-width: 12px; */
+}
+
+.block_input[type="checkbox"]:not(:disabled) {
+    cursor: pointer;
+}
+
+.block_input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    /*background: transparent;*/
+    background: #f0fff3;
+    height: 100%;
+    width: 100%;
+    outline: #98b196 solid 4px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.block_input[type="checkbox"]:disabled::after {
+    content: '';
+    position: absolute;
+    background: #ccfca530;
+    /* border: #88E4FC solid 2px; */
+    border-top: none;
+    border-right: none;
+    height: 100%;
+    width: 100%;
+}
+
+.block_input:focus-within {
+    outline: none;
+}
+
+#submitbtn {
+    line-height: 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    background: #fbce98;
+    padding: 0 1rem;
+    margin: 8px;
+    border-radius: 5px;
+}
+form{
+    width: 312px;
+}
+.boxoutline {
+    background: #ddd7d0;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 8px;
+    display: none;
+    /*切換grid*/
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-auto-rows: 100px; */
+    /* 設定高度為100PX*/
+}
+
+.shift_box{
+    padding: 8px 8px 6px 8px;
+    margin: 8px 8px;
+    /*text-align: center;*/
+    background: #FFF;
+    display: flex;
+    position: relative;
+    z-index: 2
+}
+.change_shift_box{
+    padding: 8px 8px 6px 8px;
+    margin: 0px 8px 8px 8px;
+    text-align: center;
+    background: #FFF;
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+.change_shift_box.hidden{
+     display: none;
+}
+.shift_box_x1{
+    position: relative;
+}
+.shift_box_x1::after{
+    content: "》";
+    font-weight: bolder;
+    font-size: 20px;
+    position: absolute;
+    filter: drop-shadow(3px 0px 1px rgba(0, 0, 0, 0.4));
+    bottom: -24px;
+    color: #a56b23;
+    transform: rotate(90deg);
+    transition: all .5s;
+}
+.shift_box_x1.open::after{
+    content: "》";
+    font-weight: bolder;
+    font-size: 20px;
+    position: absolute;
+    filter: drop-shadow(2px 0px 1px rgba(0, 0, 0, 0.4));
+    color: #a56b23;
+    bottom: -16px;
+    justify-content: center;
+    transform: rotate(-90deg);
+    transition: all .5s;
+}
+.shift_box_data{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+.shift_box_punch{
+padding: 2px 4px;
+    margin-top: -8px;
+}
+.shift_box_text{
+   padding: 2px 4px 0 4px;
+}
+.shift_box_text:not(.smalltitle) {
+  font-size: 10px;
+    font-weight: normal;
+    color: #888888;
+}
+.smalltitle{
+    font-size: 10px;
+    font-weight: bolder;
+    color: #48832a;
+}
+.shift_box_text .remarktext{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.change_shift_box input,.change_shift_box textarea{
+   border: 1px solid #888;
+    border-radius: 2px;
+    margin: 2px;
+}
+.change_shift_box input:focus-visible,.change_shift_box textarea:focus-visible{
+outline-color: #48832a;
+}
+.change_shift_submit{
+   /*line-height: 3rem;*/
+    /*font-size: 1.2rem;*/
+    font-weight: bold;
+    border: none;
+    background: #fbce98;
+    padding: 8px 8px;
+    /*margin: 8px;*/
+    border-radius: 5px;
+}
+.badge{
+    font-size: 10px;
+    padding: 0 3px;
+    border-radius: 50px;
+}
+.badge.badge_default{
+    /*background: #ccc;*/
+    border: 1px solid #ccc;
+    color: #999;
+}
+.badge.badge_over{
+    /*background: #fd7f7f;*/
+    border: 1px solid #ea2222;
+    color: #fc3d3d;
+}
+.badge.badge_now{
+    /*background: #67d067;*/
+    border: 1px solid #298b29;
+    color: #298b29;
+}

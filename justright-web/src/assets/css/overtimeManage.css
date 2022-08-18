@@ -1,0 +1,88 @@
+.OvertimeManage {
+    width: 100%;
+}
+
+.filterBar button:last-child {
+    margin-right:0;
+}
+.filterBar button {
+    background-color: #f0f7f9;
+    border: 0;
+    color: #3d3d3d;
+    cursor: pointer;
+    margin-right: 1%;
+    padding: 10px 20px 10px 10px;
+    text-align: left;
+    width: 19%;
+}
+.filterBar button span {
+    float: right;
+}
+.filterBar button.active {
+    background-color: #9dddf9;
+    color: #fff;
+    position: relative;
+}
+.filterBar button.active:after {
+    background-color: #fff;
+    border-bottom: 4px solid #78cfff;
+    bottom: -17px;
+    content: ' ';
+    display: block;
+    margin: 0 -10px;
+    position: absolute;
+    width: 100%;
+}
+
+.tableSearch {
+    margin-top: 30px;
+}
+
+
+.tableWrapper tbody td:last-child a span {
+    display: none;
+}
+
+.tableWrapper {
+    margin-top: 20px;
+}
+.tableWrapper table {
+    border-collapse: collapse;
+    width: 99%;
+}
+.tableWrapper td,
+.tableWrapper th {
+    padding: 10px 5px;
+    text-align: center;
+}
+.tableWrapper thead tr {
+    background-color: #8bd6e3;
+    color: #fff;
+}
+.tableWrapper thead th:nth-child(8),
+.tableWrapper tbody td:nth-child(8) {
+    text-align: left;
+}
+.tableWrapper tbody i {
+    display: inline-block;
+    border-radius: 20px;
+    height: 10px;
+    margin-right: 10px;
+    width: 10px;
+}
+.tableWrapper tbody i.pass {
+    background-color: #f95006;
+    box-shadow: 0px 0px 5px 3px rgba(249,80,6,.5);
+} 
+.tableWrapper tbody i.fail {
+    background-color: #48e51c;
+    box-shadow: 0px 0px 5px 3px rgba(72,229,28,.5);
+} 
+.tableWrapper tbody td:last-child a {
+    background: url(../img/tableSetting.png) 0 0 no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+} 

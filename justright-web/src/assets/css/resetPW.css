@@ -1,0 +1,54 @@
+.Resetpw {
+    width: 100%;
+}
+
+.resetpwMain {
+    height: 80vh;
+    display: flex;
+    margin-top: 2vmin;
+}
+
+.rsbgImg {
+    height: 66vh;
+}
+
+.rspwForm {
+    height: 70vh;
+    width: 45%;
+    text-align: right;
+    display: block;
+    position: relative;
+    top: 7vmin;
+    background-color: #f0f7f9;
+}
+
+.rspwFormtitle {
+    color: #3e7ded;
+    font-size: 5vmin;
+    font-weight: bold;
+}
+
+.rspwtext {
+    font-size: 2vmin;
+}
+
+.rspwForm input {
+    font-size: 3vmin;
+    height: 5.5vmin;
+    width: 70%;
+    margin-top: 3vmin;
+    margin-bottom: 1vmin;
+    border: none;
+    box-shadow: 10px 10px 10px -7px #7474748e;
+}
+
+.rspwSubmit {
+    margin-top: 6vmin !important;
+}
+
+.rspwSubmit input {
+    height: 5.5vmin;
+    color: #FFF;
+    background-color: #3e7ded;
+    box-shadow: none !important;
+}

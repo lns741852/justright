@@ -1,0 +1,399 @@
+html {
+    font-size: 1em;
+    font-family: '微軟正黑體', Arial, 'ArialUnicodeMS';
+    color: #3f3f3f;
+    margin: 0 !important;
+}
+
+body {
+    margin: 0 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.main {
+    display: flex;
+    padding-left: 6.5vmin;
+}
+
+.menu {
+    height: 100vh;
+    width: 4.5vmin;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 0px 9px -5px #666666;
+}
+
+.menu label {
+    writing-mode: vertical-lr;
+}
+
+.menu td:first-child {
+    margin: 1vmin;
+    padding: 7.5vmin 0 7.5vmin 0;
+}
+
+.menu button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#menu * {
+    writing-mode: vertical-rl;
+    transform: rotate( 180deg);
+    cursor: pointer;
+}
+
+.functionList {
+    height: 100vh;
+    width: 11vw;
+    margin-right: 2vmin;
+    box-shadow: 3px 0px 9px -5px #666666;
+}
+
+.functionList li span {
+    display: block;
+    width: 100%;
+}
+
+.functionList li span:hover {
+    background-color: #c5e5ea;
+}
+
+.functionList li {
+    background: url(../img/arrowDown.png) 90% 25px no-repeat;
+    cursor: pointer;
+    padding: 20px 10px 20px 0;
+}
+
+.functionList li.active {
+    background-image: url(../img/arrowLine.png);
+}
+
+.functionList li div {
+    display: none;
+}
+
+.functionList li div.in {
+    border-right: 6px solid #d7eef4;
+    display: block;
+    margin-top: 20px;
+    width: 90%;
+}
+
+.functionList li li {
+    background-image: none;
+    font-size: 90%;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.functionList li li.active {
+    background: none;
+    color: #3face5;
+}
+
+.bottomText {
+    height: 7.5vmin;
+    width: 100vw;
+    background-color: #f1f1f1;
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.bottomText p {
+    font-size: 0.3rem;
+}
+
+.bottomText div:first-child {
+    margin-left: 0.5rem;
+}
+
+.bottomText div:last-child {
+    position: fixed;
+    left: 40vw;
+}
+
+.top {
+    height: 10vmin;
+    width: 99%;
+    display: flex;
+    border-bottom: 0.5px #707070 solid;
+}
+
+.top .left {
+    width: 40%;
+    position: relative;
+}
+
+.leftBar {
+    position: absolute;
+    margin: 0.5vmin;
+    bottom: 0.5vmin;
+}
+
+.leftBar button {
+    border-radius: 0.5vmin;
+    background-color: transparent;
+}
+
+.leftBar label {
+    margin: 1vmin;
+}
+
+.top .right {
+    width: 60%;
+    /* line-height: 10vmin; */
+}
+
+.top .right img {
+    height: 8vmin;
+    /* text-align: right; */
+}
+
+.rightBar {
+    margin: 1vmin 0;
+    text-align: right;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rightBar a {
+    margin: 1vmin;
+}
+
+.rightBar button {
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+}
+
+.rightBar a {
+    text-decoration: none;
+}
+
+.rightBar a,
+.rightBar button {
+    border-left: 1px solid #707070;
+    color: #707070;
+    font-size: 1em;
+    padding-left: 15px;
+}
+
+.rightBar button {
+    cursor: pointer;
+    margin: 1vmin;
+}
+
+.rightBar a:last-child {
+    border: 0;
+    margin: 0;
+    padding-left: 0;
+}
+
+.functionList li {
+    list-style: none;
+}
+
+h1,
+th,
+.functionList li {
+    user-select: none;
+}
+
+h1 {
+    color: #707070;
+    font-weight: normal;
+    margin: 1vmin;
+    text-align: right;
+}
+
+h1 small {
+    float: left;
+}
+
+.btnAdd {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px -7px #000000;
+    cursor: pointer;
+    font-size: .8em;
+    height: 30px;
+    vertical-align: top;
+    width: 150px;
+}
+
+.btn {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px -7px #000000;
+    cursor: pointer;
+    font-size: .8em;
+    height: 30px;
+    margin: 0 5px;
+    vertical-align: top;
+    width: 90px;
+}
+
+.closeParent {
+    position: relative;
+}
+
+.btn.btnClose {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50px;
+    width: 30px;
+}
+
+.btnUpload {
+    background-color: #ededed;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px -7px #000000;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: .8em;
+    height: 23px;
+    margin: 0 5px;
+    padding-top: 5px;
+    vertical-align: top;
+    width: 100px;
+}
+
+.inputUpload {
+    width: 100px;
+    text-indent: -70px;
+}
+
+.textSearch {
+    border: 1px solid #e1e1e1;
+    box-shadow: inset 0px 0px 25px -20px rgba(0, 0, 0, .7);
+    font-size: .8em;
+    height: 30px;
+    vertical-align: top;
+    width: 300px;
+}
+
+.dateSearch {
+    border: 1px solid #e1e1e1;
+    box-shadow: inset 0px 0px 25px -20px rgba(0, 0, 0, .7);
+    font-size: .8em;
+    height: 30px;
+    vertical-align: top;
+    width: 175px;
+}
+
+.selectSearch {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    box-shadow: inset 0px 0px 25px -20px rgba(0, 0, 0, .7);
+    display: inline-block;
+    height: 32px;
+    overflow: hidden;
+    vertical-align: top;
+    width: 300px;
+    position: relative;
+}
+
+.selectSearch select {
+    background: transparent;
+    border: 0;
+    height: 37px;
+    margin: -3px 0 0 -3px;
+    padding: 10px;
+    width: 350px;
+    position: relative;
+    z-index: 2;
+}
+
+.selectSearch:after {
+    background: url(../img/arrowDown.png) 0 0 no-repeat;
+    content: ' ';
+    display: block;
+    height: 9px;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    width: 16px;
+    z-index: 1;
+}
+
+.btnCalendar span,
+.btnSearch span {
+    display: none;
+}
+
+.btnSearch {
+    background: url(../img/search.png) 0 0 no-repeat;
+    background-size: contain;
+    border: 0;
+    cursor: pointer;
+    height: 33px;
+    margin: 0 10px;
+    vertical-align: top;
+    width: 50px;
+}
+
+.btnCalendar {
+    background: url(../img/calendar.png) 0 0 no-repeat;
+    background-size: contain;
+    border: 0;
+    cursor: pointer;
+    height: 35px;
+    margin-left: 25px;
+    width: 40px;
+}
+
+.VuePagination__count {
+    display: none;
+}
+
+tbody tr {
+    clear: both;
+}
+
+tbody tr.VueTables__no-results td {
+    text-align: center;
+    width: 100%;
+}
+
+.editWintran-enter-active,
+.editWintran-leave-active .addWintran-enter-active,
+.addWintran-leave-active {
+    transition: 0.5s all;
+}
+
+.editWintran-enter,
+.editWintran-leave-to,
+.addWintran-enter,
+.addWintran-leave-to {
+    opacity: 0;
+}
+
+.editWintran-enter-to,
+.editWintran-leave,
+.addWintran-enter-to,
+.addWintran-leave {
+    opacity: 1;
+}
+
+.submit {
+    margin: auto;
+}

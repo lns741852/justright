@@ -1,0 +1,8 @@
+﻿*.code-workspace
+*.pyc
+uwsgi2.log.bak
+uwsgi2.log
+uwsgi2.log.bak1
+uwsgi2.log.bak2
+.idea
+upload

@@ -1,0 +1,306 @@
+.AttendanceQuery {
+    width: 100%;
+}
+
+h2 {
+    font-size: 1em;
+    letter-spacing: 4px;
+    margin: 20px auto 0;
+    width: 90%;
+}
+
+h2 span {
+    background-color: #f0f7f9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: normal;
+    margin-left: 75px;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.contentBody {
+    background-color: #f0f7f9;
+    margin: auto;
+    padding: 33px 40px;
+    width: calc(100% - 80px - 10%);
+}
+
+.contentBody form .left {
+    float: left;
+}
+
+.contentBody form {
+    margin: auto;
+    width: 80%
+}
+
+.inputGroup {
+    clear: both;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+
+.inputGroup .right {
+    display: inline-block;
+    margin-left: 2rem;
+}
+
+.selectDept,
+.selectTitle {
+    display: inline-block;
+}
+
+.AttendanceQuery .selectSearch,
+.AttendanceQuery .textSearch {
+    margin-left: 0.5rem;
+}
+
+.AttendanceQuery .selectSearch {
+    height: 32px;
+    ;
+}
+
+.contentBody form label {
+    vertical-align: middle;
+}
+
+.contentBody form input[type=radio] {
+    margin: 0 5px;
+}
+
+.dateWrapper {
+    clear: both;
+    padding-top: 20px;
+    vertical-align: middle;
+}
+
+.dateWrapper .dateSearch {
+    margin: 0 10px;
+}
+
+.result {
+    margin: auto;
+    width: 95%;
+}
+
+.result .resultTitle {
+    float: left;
+    /* width: 10%; */
+}
+
+.result table {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, .2);
+    border-collapse: collapse;
+    float: right;
+    margin-right: 9%;
+    position: relative;
+    table-layout: fixed;
+    text-align: center;
+    vertical-align: top;
+    height: 45vh;
+    width: 85%;
+}
+
+.AttendanceQuery .result table td {
+    /* width: 20%; */
+    white-space: nowrap;
+}
+
+.AttendanceQuery .result table td,
+.AttendanceQuery .result table th {
+    padding: 10px 5px;
+    width: calc(100%/8);
+}
+
+.btnExport {
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, .2);
+    border: 0;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 4px 15px;
+    vertical-align: middle;
+}
+
+.btnExport,
+.result table th {
+    background-color: #8bd6e3;
+    color: #fff;
+}
+
+.clear {
+    clear: both;
+}
+
+.result table tbody th {
+    position: sticky;
+}
+
+.AttendanceQuery .result table tbody tr {
+    display: inline-table;
+    width: calc(100% + 10px);
+}
+
+.AttendanceQuery .result table tbody {
+    display: block;
+    max-height: calc(40vh - 41px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    /* margin: 0 -8px 0 0; */
+}
+
+.result table tbody::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.result table tbody::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    --webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #05050518;
+}
+
+.result table tbody::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: transparent;
+}
+
+@media all and (max-width: 1280px) {
+    .contentBody form .right {
+        float: none;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+.AttendanceQuery .VueTables__child-row-toggler--closed::before {
+    background-image: url("../img/downArrow.png");
+    background-size: contain;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: -3px;
+    width: 25px;
+    height: 25px;
+    content: "";
+}
+
+.AttendanceQuery .VueTables__child-row-toggler--open::before {
+    background-image: url("../img/upArrow.png");
+    background-size: contain;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: -3px;
+    width: 25px;
+    height: 25px;
+    content: "";
+}
+
+.AttendanceQuery .editWindow,
+.AttendanceQuery .addwindow {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background: rgba(133, 133, 133, 0.8);
+}
+
+.AttendanceQuery .editWindow .editWindow_content,
+.AttendanceQuery .addwindow .addwindow_content {
+    width: 50vw;
+    background: white;
+    border-radius: 5px;
+    margin: 1vw auto;
+    padding: 1vw;
+}
+
+.addForm_box {
+    width: 80%;
+    padding: 1rem 0;
+    margin: auto;
+    text-align: left;
+    background-color: aliceblue;
+}
+
+.addForm_row {
+    display: grid;
+    height: auto;
+    grid-template-columns: 0.75fr 1.5fr;
+    grid-template-rows: 2.5rem;
+    gap: 15px;
+}
+
+.addForm_lable {
+    padding-left: 40%;
+}
+
+.addForm_lable_error {
+    font-size: 1rem;
+    color: #F00;
+    text-align: left;
+    align-self: center;
+    padding-left: 5%;
+}
+
+.addForm_box input,
+.addForm_box select {
+    border: 1.5px solid #ffbb00;
+    border-radius: 5px;
+    height: 1.5rem;
+}
+
+.addForm_lable,
+.addForm_input:not(.align_no) {
+    display: flex;
+    align-self: center;
+    position: relative;
+}
+
+.addForm_box select {
+    height: 2rem;
+}
+
+.addForm_box input:focus {
+    outline: auto 2px #fd9800;
+}
+
+.addForm_box .checkbox_btn {
+    /* background: #000; */
+    /* position: relative; */
+    vertical-align: middle;
+}
+
+.addForm_box .addForm_input .checkbox_checkbox:checked+.checkbox_btn::after {
+    content: '√';
+    background: #fd9800;
+    color: #FFF;
+    height: 1.9rem;
+    width: 4rem;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    line-height: 1.9rem;
+    align-self: auto;
+    border-radius: 5px;
+    border: 1.5px solid #fd8700;
+}
+
+.addForm_box .addForm_input .checkbox_checkbox+.checkbox_btn::after {
+    content: '×';
+    background: #fff8ed;
+    height: 1.9rem;
+    width: 4rem;
+    position: absolute;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    line-height: 1.9rem;
+    align-self: auto;
+    border-radius: 5px;
+    border: 1.5px solid #ffbb00;
+}

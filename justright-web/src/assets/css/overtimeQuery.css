@@ -1,0 +1,160 @@
+    .OvertimeQuery {
+        width: 100%;
+    }
+    
+    h2 {
+        font-size: 1em;
+        letter-spacing: 4px;
+        margin: 20px auto 0;
+        width: 90%;
+    }
+    
+    h2 span {
+        background-color: #f0f7f9;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-weight: normal;
+        margin-left: 75px;
+        padding: 10px 25px;
+        text-align: center;
+    }
+    
+    .contentBody {
+        background-color: #f0f7f9;
+        margin: auto;
+        padding: 33px 40px;
+        width: calc(100% - 80px - 10%);
+    }
+    
+    .contentBody form .left {
+        float: left;
+    }
+    
+    .contentBody form {
+        margin: auto;
+        width: 80%
+    }
+    
+    .inputGroup {
+        clear: both;
+        margin-bottom: 20px;
+        vertical-align: middle;
+    }
+    
+    .selectDept,
+    .selectTitle {
+        display: inline-block;
+    }
+    
+    .contentBody form label {
+        vertical-align: middle;
+    }
+    
+    .contentBody form input[type=radio] {
+        margin: 0 5px;
+    }
+    
+    .dateWrapper {
+        clear: both;
+        padding-top: 20px;
+        vertical-align: middle;
+    }
+    
+    .dateWrapper .dateSearch {
+        margin: 0 10px;
+    }
+    
+    .result {
+        margin: auto;
+        width: 95%;
+    }
+    
+    .result .resultTitle {
+        float: left;
+        width: 10%;
+    }
+    
+    .result table {
+        background-color: #fff;
+        box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, .2);
+        border-collapse: collapse;
+        float: right;
+        margin-right: 9%;
+        position: relative;
+        table-layout: fixed;
+        text-align: center;
+        vertical-align: top;
+        height: 40vh;
+        width: 81%;
+    }
+    
+    .OvertimeQuery .result table td {
+        width: calc(100% / 7);
+    }
+    
+    .OvertimeQuery .result table td,
+    .OvertimeQuery .result table th {
+        width: calc(100% / 7);
+        padding: 10px 5px;
+    }
+    
+    .btnExport {
+        box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, .2);
+        border: 0;
+        cursor: pointer;
+        font-size: 1.1em;
+        padding: 4px 15px;
+        vertical-align: middle;
+    }
+    
+    .btnExport,
+    .result table th {
+        background-color: #8bd6e3;
+        color: #fff;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    .result table tbody th {
+        position: sticky;
+    }
+    
+    .OvertimeQuery .result table tbody tr {
+        display: inline-table;
+        width: calc(100% + 8px);
+    }
+    
+    .OvertimeQuery .result table tbody {
+        display: block;
+        max-height: calc(40vh - 41px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: absolute;
+        width: 100%;
+    }
+    
+    .result table tbody::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .result table tbody::-webkit-scrollbar-thumb {
+        border-radius: 100px;
+        --webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background: #05050518;
+    }
+    
+    .result table tbody::-webkit-scrollbar-track {
+        border-radius: 0;
+        background: transparent;
+    }
+    
+    @media all and (max-width: 1280px) {
+        .contentBody form .right {
+            float: none;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    }

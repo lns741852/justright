@@ -1,0 +1,575 @@
+.Attendance {
+    width: 100%;
+}
+
+.attendanceMain {
+    text-align: center;
+    align-items: center;
+    /* height: 80vh; */
+    display: flex;
+    margin-top: 2vmin;
+}
+
+.attendanceTable {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Attendance .bar {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.Attendance .bar table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.Attendance .bar .left {
+    text-align: left;
+}
+
+.Attendance .bar .right {
+    text-align: right;
+}
+
+.Attendance .tableTitle {
+    font-size: 5vmin;
+}
+
+.Attendance .tableBorder {
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.Attendance .table {
+    height: 70vh;
+    width: 75vw;
+    margin: 0px auto;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    position: relative;
+    padding: 0 calc(1rem + 8px) 0 16px;
+}
+
+.Attendance .table.inporttable {
+    /* margin-top: 16px; */
+    height: 80vh;
+    width: auto;
+}
+
+.Attendance .table.timetable {
+    margin-top: 16px;
+    width: 95%;
+}
+
+.Attendance .table.timetable table tbody tr.VueTables__row {
+    /* border: 0.5px rgba(0, 0, 0, 0.384) solid; */
+    margin: 0.5vmin 0;
+    background: #FFF;
+    box-shadow: 10px 4px 16px -7px #7474748e;
+}
+
+.timetable_bg {
+    position: absolute;
+    height: 5vmin;
+    width: 100%;
+    background: #9cd5e2;
+    left: 0;
+}
+
+.Attendance .table.timetable table tbody tr td {
+    padding: 0;
+}
+
+.Attendance .table.timetable .VueTables__row {
+    margin: 0;
+}
+
+.Attendance .table.timetable tr {
+    height: 2rem;
+}
+
+.Attendance .attendanceTable_bg {
+    width: 100%;
+    background: #9cd5e2;
+    height: 5vmin;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 10px 4px 16px -7px #7474748e;
+}
+
+.Attendance .table table {
+    text-align: center !important;
+    height: 1.5rem;
+    width: 100%;
+    border: none;
+    padding: 0.1rem 0 0.1rem 0;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+.Attendance .table table thead tr th {
+    font-weight: bold;
+    color: #FFF;
+    background-color: #9cd5e2;
+    position: sticky;
+    top: 0;
+    /* 列首永遠固定於上 */
+}
+
+.Attendance .table table tbody {
+    display: block;
+    height: 60vh;
+    overflow-y: scroll;
+    /* padding: 0 2vmin 0 0; */
+    margin-right: calc(-1rem - 8px);
+    padding-right: 1rem;
+}
+
+.Attendance .table table thead,
+.Attendance .table tbody tr {
+    display: table;
+    width: 100%;
+    height: 5vmin;
+    table-layout: fixed;
+}
+
+
+/* .Attendance .table table thead {
+    width: calc(100% - 1.5vmin)
+} */
+
+.Attendance .table table tbody tr.VueTables__row {
+    /* border: 0.5px rgba(0, 0, 0, 0.384) solid; */
+    margin: 1.5vmin 0;
+    background: #FFF;
+    box-shadow: 10px 4px 16px -7px #7474748e;
+}
+
+.Attendance .childRow {
+    text-align: left;
+    padding-left: 7vmin;
+    border: transparent !important;
+}
+
+tr:focus-within td,
+.VueTables__sortable:focus-within {
+    outline: none;
+}
+
+.VueTables__sortable:hover {
+    cursor: pointer;
+}
+
+.Attendance .table table tbody tr td:first-child,
+.Attendance .table table thead tr th:first-child {
+    width: 15%;
+}
+
+.Attendance .table table tbody tr td {
+    height: 1rem;
+    padding: 5px 0;
+    word-break: break-all;
+    /* user-select: none; */
+}
+
+
+/*-------滾動條整體樣式----*/
+
+.table table tbody::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+
+/*滾動條裡面小方塊樣式*/
+
+.table table tbody::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    --webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #05050518;
+}
+
+
+/*滾動條裡面軌道樣式*/
+
+.table table tbody::-webkit-scrollbar-track {
+    /* --webkit-box-shadow: inset 0 0 5px rgba(255, 255, 255, 0); */
+    border-radius: 0;
+    background: transparent;
+}
+
+.VuePagination__count {
+    display: none;
+}
+
+.Attendance .VueTables__child-row-toggler {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.Attendance .VueTables__child-row-toggler--closed:hover::after {
+    background: rgb(241, 241, 241);
+    display: inline-block;
+    white-space: nowrap;
+    margin: -3px 0 0 25px;
+    padding: 3px 6px;
+    border: #aaa solid 1px;
+    font-size: 10px;
+    content: "所在位置";
+}
+
+.Attendance .VueTables__child-row-toggler--closed::before {
+    background-image: url("../img/downArrow.png");
+    background-size: contain;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: -3px;
+    width: 25px;
+    height: 25px;
+    content: "";
+}
+
+.Attendance .VueTables__child-row-toggler--open::before {
+    background-image: url("../img/upArrow.png");
+    background-size: contain;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: -3px;
+    width: 25px;
+    height: 25px;
+    content: "";
+}
+
+.VTattendanceStuts {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+}
+
+.VTattendanceStuts .attendanceStutsColor {
+    height: 1.5vmin;
+    width: 1.5vmin;
+}
+
+.VTattendanceAction button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.VTattendanceAction button img {
+    cursor: pointer;
+    height: 40px!important;
+    width: 40px!important;
+}
+
+.textSearch.form-control {
+    display: inline-block;
+}
+
+.Attendance select {
+    width: 8.5rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: transparent;
+    margin: 0;
+}
+
+.Attendance .selectSearch {
+    width: auto;
+    margin: 0;
+    height: 32px;
+    margin-left: 5px;
+}
+
+.btnSearch {
+    display: inline-block;
+}
+
+.attendanceTable .bar {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Attendance .inputWindow {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background: rgba(133, 133, 133, 0.8);
+}
+
+.Attendance .inputWindow .inputWindow_content {
+    width: 50vw;
+    background: white;
+    border-radius: 5px;
+    margin: 1vw auto;
+    padding: 1vw;
+}
+
+.Attendance .inputWindow .inputWindow_content .right {
+    position: relative;
+}
+
+.Attendance .inputWindow .inputWindow_content .right .selectSearch {
+    position: absolute;
+    left: 20px;
+}
+
+.title_box {
+    position: relative;
+}
+
+.title_box span {
+    font-size: 1.5rem;
+}
+
+.timeEditwindow .title_box {
+    margin-bottom: 1rem;
+}
+
+.Attendance .inputWindow .inputWindow_content .right .close_window_btn,
+.title_box .close_window_btn {
+    position: absolute;
+    right: 0 !important;
+    width: 37px !important;
+    height: 35px !important;
+    border-radius: 50px !important;
+    font-size: larger !important;
+}
+
+.Attendance .title_box .left_window_btn {
+    position: absolute;
+    left: 0;
+}
+
+.Attendance .inputWindow_content .inputUpload {
+    text-align-last: center;
+    width: 250px !important;
+}
+
+.Attendance .inputWindow_content input[type="file" i]::-webkit-file-upload-button {
+    z-index: -1 !important;
+    position: relative !important;
+}
+
+.Attendance .inputWindow_content .table_bg {
+    width: 50vw;
+    background: #9cd5e2;
+    height: 5vmin;
+    position: absolute;
+    box-shadow: 10px 4px 16px -7px #7474748e;
+}
+
+.Attendance .inputWindow_content .table table tbody {
+    height: 73vh;
+}
+
+.Attendance .inputWindow button {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px -7px #000000;
+    cursor: pointer;
+    font-size: .8em;
+    height: 30px;
+    vertical-align: top;
+    width: 90px;
+}
+
+.submitlocation {
+    width: auto;
+    height: 30px;
+}
+
+.Attendance .inputWintran-enter-active,
+.Attendance .inputWintran-leave-active {
+    transition: 0.5s all;
+}
+
+.Attendance .inputWintran-enter,
+.Attendance .inputWintran-leave-to {
+    opacity: 0;
+}
+
+.Attendance .inputWintran-enter-to,
+.Attendance .inputWintran-leave {
+    opacity: 1;
+}
+
+.Attendance .timeWindow {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background: rgba(133, 133, 133, 0.8);
+}
+
+.Attendance .timeWindow .timeWindow_content {
+    width: 50vw;
+    background: white;
+    border-radius: 5px;
+    margin: 1vw auto;
+    padding: 1vw;
+}
+
+.Attendance .timeWintran-enter-active,
+.Attendance .timeWintran-leave-active {
+    transition: 0.5s all;
+}
+
+.Attendance .timeWintran-enter,
+.Attendance .timeWintran-leave-to {
+    opacity: 0;
+}
+
+.Attendance .timeWintran-enter-to,
+.Attendance .timeWintran-leave {
+    opacity: 1;
+}
+
+.Attendance .timeEditwindow {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background: rgba(133, 133, 133, 0.8);
+}
+
+.Attendance .timeEditwindow .timeEditwindow_content {
+    width: 35vw;
+    background: white;
+    border-radius: 5px;
+    margin: 1vw auto;
+    padding: 1vw;
+}
+
+.Attendance .timeEditwintran-enter-active,
+.Attendance .timeEditwintran-leave-active {
+    transition: 0.5s all;
+}
+
+.Attendance .timeEditwintran-enter,
+.Attendance .timeEditwintran-leave-to {
+    opacity: 0;
+}
+
+.Attendance .timeEditwintran-enter-to,
+.Attendance .timeEditwintran-leave {
+    opacity: 1;
+}
+
+.Attendance .addForm_box {
+    width: 80%;
+    padding: 1rem 0;
+    margin: auto;
+    text-align: left;
+    background-color: aliceblue;
+}
+
+.Attendance .addForm_row {
+    display: grid;
+    height: auto;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 2.5rem;
+    gap: 15px;
+}
+
+.Attendance .addForm_lable {
+    padding-left: 40%;
+}
+
+.Attendance .addForm_lable_error {
+    font-size: 1rem;
+    color: #F00;
+    text-align: left;
+    align-self: center;
+    padding-left: 5%;
+}
+
+.Attendance .addForm_box input,
+.Attendance .addForm_box select {
+    border: 1.5px solid #ffbb00;
+    border-radius: 5px;
+    height: 1.5rem;
+}
+
+.Attendance .addForm_lable,
+.Attendance .addForm_input:not(.align_no) {
+    display: flex;
+    align-self: center;
+    position: relative;
+}
+
+.Attendance .addForm_box select {
+    height: 2rem;
+}
+
+.Attendance .addForm_box input:focus {
+    outline: auto 2px #fd9800;
+}
+
+.Attendance .addForm_box .checkbox_btn {
+    vertical-align: middle;
+}
+
+.Attendance .addForm_box .addForm_input .checkbox_checkbox:checked+.checkbox_btn::after {
+    content: '√';
+    background: #fd9800;
+    color: #FFF;
+    height: 1.9rem;
+    width: 4rem;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    line-height: 1.9rem;
+    align-self: auto;
+    border-radius: 5px;
+    border: 1.5px solid #fd8700;
+}
+
+.Attendance .addForm_box .addForm_input .checkbox_checkbox+.checkbox_btn::after {
+    content: '×';
+    background: #fff8ed;
+    height: 1.9rem;
+    width: 4rem;
+    position: absolute;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    line-height: 1.9rem;
+    align-self: auto;
+    border-radius: 5px;
+    border: 1.5px solid #ffbb00;
+}
+
+.Attendance .timeEditwindow_submit {
+    margin-top: 1rem;
+}

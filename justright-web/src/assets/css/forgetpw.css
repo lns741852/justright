@@ -1,0 +1,71 @@
+.Forgetpw {
+    width: 100%;
+}
+
+.forgetpwMain {
+    height: 80vh;
+    display: flex;
+    margin-top: 2vmin;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fgbgImg {
+    max-height: 66vh;
+    max-width: 45%;
+}
+
+.fgpwForm {
+    height: 70vh;
+    width: 45%;
+    text-align: right;
+    display: block;
+    position: relative;
+    background-color: #f0f7f9;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fgpwForm_box {
+    width: 65%;
+}
+
+.fgpwFormtitle {
+    color: #3e7ded;
+    font-size: 5vmin;
+    font-weight: bold;
+}
+
+.fgpwtext {
+    font-size: 2vmin;
+}
+
+.fgpwForm input {
+    font-size: 3vmin;
+    height: 5.5vmin;
+    width: 95%;
+    margin-top: 3vmin;
+    margin-bottom: 1vmin;
+    border: none;
+    box-shadow: 10px 10px 10px -7px #7474748e;
+}
+
+.fgpwSubmit {
+    margin-top: 6vmin !important;
+    margin-bottom: 2rem;
+}
+
+.fgpwSubmit input {
+    height: 5.5vmin;
+    color: #FFF;
+    background-color: #3e7ded;
+    /* box-shadow: none !important; */
+    box-shadow: 10px 10px 10px -7px #3c3c3cbd;
+}
+
+.fgpwSubmit input:active {
+    box-shadow: 1px 1px 3px #222;
+    background-color: #115bdb;
+}

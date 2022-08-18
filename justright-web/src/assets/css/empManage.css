@@ -1,0 +1,313 @@
+.EmpManage {
+    width: 100%;
+}
+
+.empManagemain {
+    /* text-align: center; */
+    /* align-items: center; */
+    /* height: 80vh; */
+    /* display: flex; */
+    margin-top: 2vmin;
+}
+
+.EmpManage .bar {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.EmpManage .bar table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.EmpManage .bar table tr td:first-child {
+    font-size: 4vmin;
+    text-align: left;
+}
+
+.EmpManage .bar table tr td:last-child {
+    text-align: right;
+}
+
+.EmpManage .tableTitle {
+    font-size: 5vmin;
+}
+
+.EmpManage .tableBorder {
+    height: 70vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.EmpManage .table {
+    /* height: 70vh; */
+    width: 97.5%;
+    margin: 0px auto;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    position: relative;
+    padding-right: 8px;
+}
+
+.EmpManage .table table {
+    text-align: center !important;
+    height: 1.5rem;
+    width: 100%;
+    border: none;
+    padding: 0.1rem 0 0.1rem 0;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+
+#theadbg {
+    position: absolute;
+    background-color: #9cd5e2;
+    height: 5vmin;
+    width: 100%;
+}
+
+.EmpManage .table table thead tr th {
+    font-weight: bold;
+    color: #FFF;
+    background-color: #9cd5e2;
+    position: sticky;
+    top: 0;
+    /* 列首永遠固定於上 */
+}
+
+.EmpManage .table table tbody {
+    display: block;
+    height: 60vh;
+    overflow-y: scroll;
+    /* padding: 0 2vmin 0 0; */
+    margin: 0 -8px 0 0;
+}
+
+.EmpManage .table table thead, .EmpManage .table tbody tr {
+    display: table;
+    width: 100%;
+    height: 5vmin;
+    table-layout: fixed;
+    border-bottom: 0.1rem solid #9cd5e2;
+    /* box-shadow: 10px 4px 16px -7px #7474748e; */
+}
+
+.EmpManage .tableBorder thead th:nth-child(7), .EmpManage .tableBorder tbody td:nth-child(7) {
+    width: 19%;
+}
+
+.EmpManage .VTempAuth i span {
+    font-style: normal;
+    background-color: #0d80d6;
+    border-radius: 50px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 1px;
+    padding: 3px 15px;
+}
+
+.EmpManage .VTempAuth {
+    padding-left: 2.5rem;
+    text-align: left
+}
+
+.EmpManage .table table tbody tr.VueTables__row {
+    /* border: 0.5px rgba(0, 0, 0, 0.384) solid; */
+    padding: 2vmin 0;
+}
+
+.EmpManage .table table tbody tr .VueTables__row:first-child {
+    /* border: 0.5px rgba(0, 0, 0, 0.384) solid; */
+    margin-top: 0;
+}
+
+.EmpManage .childRow {
+    text-align: left;
+    padding-left: 7vmin;
+    border: transparent !important;
+}
+
+tr:focus-within td, .VueTables__sortable:focus-within {
+    outline: none;
+}
+
+.VueTables__sortable:hover {
+    cursor: pointer;
+}
+
+.EmpManage .table table tbody tr td {
+    height: 1rem;
+    /* padding: 5px; */
+    /* user-select: none; */
+}
+
+/*-------滾動條整體樣式----*/
+
+.table table tbody::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/*滾動條裡面小方塊樣式*/
+
+.table table tbody::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    --webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #05050518;
+}
+
+/*滾動條裡面軌道樣式*/
+
+.table table tbody::-webkit-scrollbar-track {
+    /* --webkit-box-shadow: inset 0 0 5px rgba(255, 255, 255, 0); */
+    border-radius: 0;
+    background: transparent;
+}
+
+.VuePagination__count {
+    display: none;
+}
+
+.textSearch {
+    margin-left: 0.5rem;
+    margin-bottom: 10px;
+}
+
+.textSearch.form-control {
+    display: inline-block;
+}
+
+.EmpManage .selectSearch {
+    margin-left: 10px;
+    height: 32px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 8.5rem;
+    /* 高度加上border上下各1px剛好34px*/
+}
+
+.EmpManage .selectSearch select {
+    width: 8.5rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline: transparent;
+    margin: 0;
+}
+
+.btnSearch {
+    display: inline-block;
+}
+
+.VTempAction button {
+    background-color: transparent;
+    border: none;
+}
+
+.EmpManage .editWindow, .EmpManage .addwindow {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background: rgba(133, 133, 133, 0.8);
+}
+
+.EmpManage .editWindow .editWindow_content, .EmpManage .addwindow .addwindow_content {
+    width: 50vw;
+    background: white;
+    border-radius: 5px;
+    margin: 1vw auto;
+    padding: 1vw;
+}
+
+.addForm_box {
+    width: 80%;
+    padding: 1rem 0;
+    margin: auto;
+    text-align: left;
+    background-color: aliceblue;
+}
+
+.addForm_row {
+    display: grid;
+    height: auto;
+    grid-template-columns: 0.75fr 1.5fr;
+    grid-template-rows: 2.5rem;
+    gap: 15px;
+}
+
+.addForm_lable {
+    padding-left: 40%;
+}
+
+.addForm_lable_error {
+    font-size: 1rem;
+    color: #F00;
+    text-align: left;
+    align-self: center;
+    padding-left: 5%;
+}
+
+.addForm_box input, .addForm_box select {
+    border: 1.5px solid #ffbb00;
+    border-radius: 5px;
+    height: 1.5rem;
+}
+
+.addForm_lable, .addForm_input:not(.align_no) {
+    display: flex;
+    align-self: center;
+    position: relative;
+}
+
+.addForm_box select {
+    height: 2rem;
+}
+
+.addForm_box input:focus {
+    outline: auto 2px #fd9800;
+}
+
+.addForm_box .checkbox_btn {
+    /* background: #000; */
+    /* position: relative; */
+    vertical-align: middle;
+}
+
+.addForm_box .addForm_input .checkbox_checkbox:checked+.checkbox_btn::after {
+    content: '√';
+    background: #fd9800;
+    color: #FFF;
+    height: 1.9rem;
+    width: 4rem;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    line-height: 1.9rem;
+    align-self: auto;
+    border-radius: 5px;
+    border: 1.5px solid #fd8700;
+}
+
+.addForm_box .addForm_input .checkbox_checkbox+.checkbox_btn::after {
+    content: '×';
+    background: #fff8ed;
+    height: 1.9rem;
+    width: 4rem;
+    position: absolute;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    line-height: 1.9rem;
+    align-self: auto;
+    border-radius: 5px;
+    border: 1.5px solid #ffbb00;
+}

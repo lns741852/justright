@@ -1,0 +1,157 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <title>打卡地點</title>
+</head>
+<style>
+    .lds-ripple {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .lds-ripple div {
+        position: absolute;
+        border: 4px solid #48832a;
+        opacity: 1;
+        border-radius: 50%;
+        animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+    
+    .lds-ripple div:nth-child(2) {
+        animation-delay: -0.5s;
+    }
+    
+    @keyframes lds-ripple {
+        0% {
+            top: 36px;
+            left: 36px;
+            width: 0;
+            height: 0;
+            opacity: 1;
+        }
+        100% {
+            top: 0px;
+            left: 0px;
+            width: 72px;
+            height: 72px;
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+    <div style="width: 100vw;height: 100vh;display: flex;justify-content: center;align-items: center;flex-direction: column;">
+
+        <h1>位置搜索中</h1>
+
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+        <!-- <img src="{% static 'img/VV.png' %}" alt="">  -->
+        <!-- <button onclick="getloca()">取位置</button> -->
+        <p>準備打卡</p>
+        <div id="returnimg"></div>
+        <!-- <div id="geturl"></div>-->
+
+    </div>
+
+
+    <script>
+        // function getloca() {
+        //     navigator.geolocation.getCurrentPosition(success_lo, errorCoor, { maximumAge: 60000, timeout: 5000, enableHighAccuracy: true });
+        // }
+        // function success_lo(pos) {
+        //     var crd = pos.coords;
+        //     console.log(crd);
+        //     console.log('Your current position is:');
+        //     console.log('Latitude : ' + crd.latitude);
+        //     console.log('Longitude: ' + crd.longitude);
+        //     console.log('More or less ' + crd.accuracy + ' meters.');
+        //     $('#returnimg').text('[' + crd.latitude + ',' + crd.longitude + ']')
+        // }
+        // function errorCoor(e) {
+        //     console.log('err');
+        //     console.log(e);
+
+        // }
+        let getUrlString = location.href;
+        let url = new URL(getUrlString);
+
+
+        let nowtimestamp = new Date().getTime()
+        let datatimestamp = url.searchParams.get('punch');
+        let tourl = ''
+
+        liff.init({
+            liffId: '1656458606-r4Ve8oJM' // Use own liffId
+
+
+        })
+
+
+        liff.ready.then(() => {
+            navigator.geolocation.getCurrentPosition(async function(position) {
+                    console.log("Latitude: " + position.coords.latitude +
+                        "Longitude: " + position.coords.longitude)
+                    let crd = position.coords
+                    let returntext = crd.latitude + ',' + crd.longitude
+                    $('#returnimg').text('經緯度為[' + returntext + ']')
+
+
+                    if (nowtimestamp - datatimestamp < 180000) {
+                        console.log('時間正好')
+                        tourl = '?type=' + url.searchParams.get('type') + '&punch=' + url.searchParams.get('punch') + '&emp_no=' + url.searchParams.get('emp_no') + '&location=' + returntext
+                            //$('#geturl').text(tourl);
+                        await liff.sendMessages([{
+                            type: "image",
+                            // text: crd.latitude + ',' + crd.longitude,
+                            originalContentUrl: 'https://cgpt-hrcs-linebot.azurewebsites.net/clockInlinebot/static/img/returnimg.png' + tourl,
+                            previewImageUrl: "https://cgpt-hrcs-linebot.azurewebsites.net/clockInlinebot/static/img/returnimg.png" + tourl
+
+                            // previewImageUrl: "{% static 'img/ VV.png' %}"
+                        }])
+                    } else {
+                        console.log('過期')
+                        alert('此頁面已過期，打卡確認須在兩分鐘內完成')
+                        tourl = '&punchtype=outofftime'
+
+                    }
+                    //$('#geturl').text(tourl)
+
+
+                    liff.closeWindow()
+                },
+                function(e) {
+                    console.log('ready');
+
+                }, {
+                    maximumAge: 60000,
+                    timeout: 5000,
+                    enableHighAccuracy: true
+                })
+        })
+    </script>
+</body>
+
+</html>
